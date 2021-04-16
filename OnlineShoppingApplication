@@ -1,0 +1,134 @@
+using System;
+
+namespace OnlineShoppingApplication
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Online Shopping Application");
+
+            string userName = "anthonylavina";
+            string password = "password";
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Enter your Password:");
+                string passwordInput = Console.ReadLine();
+
+                Console.WriteLine();
+                if (passwordInput == password)
+                {
+                    Console.WriteLine("SELECT YOUR ITEM NOW");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Password.");
+                }
+            }
+
+            //item selection
+            string item1 = "FOOTWEAR (FOOTWEAR)";
+            string item2 = "TOPS (TOPS)";
+            string item3 = "BOTTOMS (BOTTOMS)";
+            string item4 = "ACCESSORIES (ACCESSORIES)";
+            //item selected
+            string selectedItem1 = "";
+            string selectedItem2 = "";
+            string selectedItem3 = "";
+            string selectedItem4 = "";
+
+            Console.WriteLine();
+            Console.WriteLine("Please enter Y to PURCHASE this RANDOM ITEM or N if not.");
+
+            Console.Write("RANDOM: " + item1 + ": ");
+            char item1YorN = char.Parse(Console.ReadLine());
+
+            if (item1YorN == 'Y')
+            {
+                selectedItem1 = item1;
+            }
+            else if (item1YorN != 'Y' || item1YorN != 'N')
+            {
+                Console.WriteLine("Invalid Input. System will exit.");
+            }
+
+            Console.Write("RANDOM: " + item2 + ": ");
+            char item2YorN = char.Parse(Console.ReadLine());
+
+            if (item2YorN == 'Y')
+            {
+                selectedItem2 = item2;
+            }
+            else if (item1YorN != 'Y' || item1YorN != 'N')
+            {
+                Console.WriteLine("Invalid Input. System will exit.");
+            }
+
+            Console.Write("RANDOM: " + item3 + ": ");
+            char item3YorN = char.Parse(Console.ReadLine());
+
+            if (item3YorN == 'Y')
+            {
+                selectedItem3 = item3;
+            }
+            else if (item3YorN != 'Y' || item1YorN != 'N')
+            {
+                Console.WriteLine("Invalid Input. System will exit.");
+            }
+
+            Console.Write("RANDOM: " + item4 + ": ");
+            char item4YorN = char.Parse(Console.ReadLine());
+
+            if (item4YorN == 'Y')
+            {
+                selectedItem4 = item4;
+            }
+            else if (item4YorN != 'Y' || item4YorN != 'N')
+            {
+                Console.WriteLine("Invalid Input. System will exit.");
+            }
+
+            //OUTPUT ALL SELECTED ITEM
+            Console.WriteLine();
+            Console.WriteLine("PURCHASED ITEMS:");
+
+            if (selectedItem1 != String.Empty)
+            {
+                Console.Write(selectedItem1);
+                Console.Write(",");
+            }
+            if (selectedItem2 != String.Empty)
+            {
+                Console.Write(selectedItem2);
+                Console.Write(",");
+            }
+            if (selectedItem3 != String.Empty)
+            {
+                Console.Write(selectedItem3);
+                Console.Write(",");
+            }
+            if (selectedItem4 != String.Empty)
+            {
+                Console.Write(selectedItem4);
+                Console.Write(",");
+            }
+
+
+
+
+
+
+
+
+
+
+
+        }
+    }
+}
+
+
+
+
